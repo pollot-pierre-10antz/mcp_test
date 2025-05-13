@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 COPY . .
@@ -6,5 +6,4 @@ COPY . .
 RUN pip install -U pip && \
     pip install -r requirements.txt --no-cache-dir
 
-EXPOSE 8000
 CMD ["python", "main.py"]
