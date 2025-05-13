@@ -4,7 +4,7 @@ from mcp.server import FastMCP
 mcp = FastMCP("Hello, World!")
 
 
-@mcp.tool()
+@mcp.tool(name="addition")
 def addition(a: float, b: float) -> float:
     """2つの数値を加算して結果を返します。
      
@@ -15,7 +15,7 @@ def addition(a: float, b: float) -> float:
     return a + b
  
  
-@mcp.tool()
+@mcp.tool(name="multiplication")
 def multiplication(a: float, b: float) -> float:
     """2つの数値を掛け算して結果を返します。
      
